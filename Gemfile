@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Devise for sign stuff...
 gem 'devise'
 
+# Pry for debugging code. Use anywhere in your code binding.pry and see the magic
+gem 'pry'
+
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
