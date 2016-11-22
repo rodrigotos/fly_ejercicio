@@ -9,7 +9,9 @@
         <li class="col-md-3"><strong><%= c.name %></strong></li>
         <li class="col-md-3"><%= c.country_name %></li>
         <li class="col-md-3"><%= c.time_zone %></li>
-        <li class="col-md-3"><a href="<%= city_path(c.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+        <li class="col-md-1"><a href="<%= city_path(c.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+        <li class="col-md-1"><a href="<%= edit_city_path(c.id) %>" class="btn btn-primary"> Edit </a></li>
+        <li class="col-md-1"><a href="<%= city_path(c.id) %>" class="btn btn-info"> Show </a></li>
       </ul>
     </article>
   <% end if @cities.any? %>
