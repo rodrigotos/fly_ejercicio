@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="text-center"> Airlines </h1>
+  <section class="row text-center airlines-controls">
+      <a href="<%= new_airline_path %>" class="btn btn-default"> New Airline </a>
+  </section>
+  <% @airlines.each do |a| %>
+    <article class="row airline">
+      <ul>
+        <li class="col-md-9"><strong><%= a.name %></strong></li>
+        <li class="col-md-1"><a href="<%= airline_path(a.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+        <li class="col-md-1"><a href="<%= edit_airline_path(a.id) %>" class="btn btn-primary"> Edit </a></li>
+        <li class="col-md-1"><a href="<%= airline_path(a.id) %>" class="btn btn-info"> Show </a></li>
+      </ul>
+    </article>
+  <% end if @airlines.any? %>
+</div>
